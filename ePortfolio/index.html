@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d66fe15ff7.js" crossorigin="anonymous"></script>
+    <title>ePortfolio</title>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="wavy">
+            <span style="--i:1">e</span>
+            <span style="--i:2">P</span>
+            <span style="--i:3">o</span>
+            <span style="--i:4">r</span>
+            <span style="--i:5">t</span>
+            <span style="--i:6">f</span>
+            <span style="--i:7">o</span>
+            <span style="--i:8">l</span>
+            <span style="--i:9">i</span>
+            <span style="--i:10">o</span>
+        </div>
+    </header>
+    <nav id="nav-bar">
+        <div id="nav-left">
+            <!--For responsiveness add menu bars - hidden on larger devices-->
+            <a id="burger-menu"><i class="fa-solid fa-bars"></i></a>
+            <!-- See main.js // Burger-Menu -->
+
+            <div id="forward-back-icons">
+                <a><i class="fa-solid  fa-circle-chevron-left" onclick="window.history.back()"></i></a>
+                <a><i class="fa-solid  fa-circle-chevron-right" onclick="window.history.forward()"></i></a>
+            </div>
+            <ul id="nav-links">
+                <li><a href="#anim-section">Animation</a></li>
+                <li><a href="#gallery-section">Gallery</a></li>
+                <li><a href="#video-section">Video</a></li>
+                <li><a href="#audio-section">Audio</a></li>
+                <li><a href="#form-section">Form</a></li>
+                <li><a href="#map-section">Map</a></li>
+                <li><a href="#special-char">Special Character</a></li>
+            </ul>
+        </div>
+        <div id="nav-right">
+            <a id="setting-icon">
+                <div><span class="tool-tip">Change Settings</span></div>
+                <i class="fa fa-gear"></i>
+            </a>
+            <div id="pref-panel">
+                <table id="pref-table">
+                    <tr>
+                        <td>Background Colour</td>
+                        <td><input type="color" id="prefs-bg-colour"></td>
+                    </tr>
+                    <tr>
+                        <td>Font Color</td>
+                        <td><input type="color" id="prefs-font-colour"></td>
+                    </tr>
+                    <tr>
+                        <td>Font Size <span id="font-size-display" style="font-weight: bold;"></span> px</td>
+                        <td><input type="range" id="prefs-font-size" max="60" min="10"></td>
+                    </tr>
+                    <tr>
+                        <td id="prefs-btn-container">
+                            <button id="prefs-save">Save</button>
+                            <button id="prefs-cancel">Cancel</button>
+                            <button id="prefs-default">Default</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </nav>
+    <main id="main-container">
+        <section id="welcome-section" class="main-section">
+            <!-- Welcome -->
+            <h1 id="welcome"> Welcome <span id="user-name"></span></h1>
+            <div id="welcome-btn-container">
+                <button id="user-reset">Reset</button>
+                <button onclick="localStorage.clear()">Clear All</button>
+            </div>
+        </section>
+        <section id="anim-section" class="main-section">
+            <!-- Animation -->
+            <h1>Animation</h1>
+            <div id="anim">
+                <!-- <img src="images/sapce.gif"> -->
+                <div id="motion-object" class="object">
+                    <svg width="113" height="81" viewBox="0 0 83 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.3729 24.61C10.4136 24.61 10.137 16.9573 7.37055 12.7161C4.77006 8.72926 0.269989 6.90743 0.269989 6.90743L0.269989 2.38959C0.269989 2.38959 12.4368 0.72998 15.8543 0.72998C22.4242 0.72998 30.3321 5.43222 32.2686 12.7161C32.2686 19.2849 26.9427 24.61 20.3729 24.61Z"
+                            fill="url(#paint0_linear)" />
+                        <path
+                            d="M20.3729 35.85C10.4136 35.85 10.137 43.5026 7.37055 47.7439C4.77006 51.7307 0.26999 53.5525 0.26999 53.5525L0.26999 58.0704C0.26999 58.0704 12.4368 59.73 15.8543 59.73C22.4242 59.73 30.3321 55.0277 32.2686 47.7439C32.2686 41.1751 26.9427 35.85 20.3729 35.85Z"
+                            fill="url(#paint1_linear)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.84234 40.5826C13.8944 45.4038 25.6981 48.5643 39.0692 48.5643C60.6666 48.5643 77.8416 37.7097 82.7298 30.1471L82.7299 30.1471C77.8417 22.5845 60.6668 11.73 39.0693 11.73C25.6982 11.73 13.8944 14.8905 6.84235 19.7118L6.84234 40.5826Z"
+                            fill="url(#paint2_linear)" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M68.7681 41.3911C75.5449 37.877 80.461 33.6575 82.7299 30.1472L82.73 30.1472C80.4676 26.647 75.5732 22.4416 68.8266 18.9336C70.5199 26.3279 70.5004 34.0033 68.7681 41.3911Z"
+                            fill="url(#paint3_linear)" />
+                        <circle cx="51.9976" cy="30.0361" r="8.09911" transform="rotate(90 51.9976 30.0361)"
+                            fill="url(#paint4_linear)" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="32.2686" y1="12.67" x2="0.269988" y2="12.67"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#18072F" />
+                                <stop offset="1" stop-color="#381F58" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear" x1="32.2686" y1="47.79" x2="0.26999" y2="47.79"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#18072F" />
+                                <stop offset="1" stop-color="#381F58" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear" x1="70.193" y1="30.1471" x2="6.84235" y2="30.1471"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#4B1BB1" />
+                                <stop offset="1" stop-color="#915EFF" />
+                            </linearGradient>
+                            <linearGradient id="paint3_linear" x1="82.73" y1="30.1472" x2="68.7508" y2="30.1472"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#18072F" />
+                                <stop offset="1" stop-color="#381F58" />
+                            </linearGradient>
+                            <linearGradient id="paint4_linear" x1="51.9976" y1="21.937" x2="51.9976" y2="38.1352"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#BFA2FF" />
+                                <stop offset="1" stop-color="#BFA2FF" stop-opacity="0.51" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div>
+                <p>This animation is controlled by these buttons</p>
+                <div class="animation-controls">
+                    <button id="start-btn" class="control-btns">Start</button>
+                    <button id="stop-btn" class="control-btns">Stop</button>
+                    <input type="range" min="1" max="15" id="animation-speed" value="3">
+                    <span id="speed-display">3 </span> seconds
+
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery-section" class="main-section">
+            <h1>Gallery</h1>
+            <!-- Gallery -->
+            <div class="gallery-container">
+
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="images/pexels-freestocksorg-839462.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="images/pexels-ezra-comeau-2387418.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="images/pexels-francesco-ungaro-2325446.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="images/pexels-pixabay-206359.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="images/pexels-pixabay-302743.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="images/pexels-pixabay-33688.jpg" style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Image text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail images -->
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="images/pexels-freestocksorg-839462.jpg" style="width:100%"
+                            onclick="currentSlide(1)" alt="The  Winter-Woods">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/pexels-ezra-comeau-2387418.jpg" style="width:100%"
+                            onclick="currentSlide(2)" alt="The Mountains">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/pexels-francesco-ungaro-2325446.jpg" style="width:100%"
+                            onclick="currentSlide(3)" alt="Mountains and Hot Air Ballon">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/pexels-pixabay-206359.jpg" style="width:100%"
+                            onclick="currentSlide(4)" alt="Sunset">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/pexels-pixabay-302743.jpg" style="width:100%"
+                            onclick="currentSlide(5)" alt="Snowy Weather">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/pexels-pixabay-33688.jpg" style="width:100%"
+                            onclick="currentSlide(6)" alt="Sky and Stars">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="video-section" class="main-section">
+            <!-- Videos -->
+            <h1>Youtube</h1>
+            <iframe src="https://www.youtube.com/embed/i93Z7zljQ7I" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <h1>Video</h1>
+            <video controls>
+                <source
+                    src="video/Y2Mate.is - Justin Bieber - Mistletoe (Official Music Video)-LUjn3RpkcKY-720p-1656020233645.mp4"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section id="audio-section" class="main-section">
+            <!-- Audio -->
+            <h1>Audio</h1>
+            <audio controls>
+                <source src="audio/file_example_MP3_700KB.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+        <section id="form-section" class="main-section">
+            <h1>Contact Form</h1>
+            <form action="#" id="contact-form" method="post">
+                <input type="text" placeholder="Name" name="name" required class="input">
+                <input type="email" name="email" id="email" placeholder="Email Address" required class="input">
+                <input type="number" name="age" id="age" placeholder="Age" required class="input">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" name="dob" id="dob" required class="input">
+                <label for="courses">Which course would you like information on:</label>
+                <br>
+
+                <select name="courses" id="courses">
+                    <option value="software">Software Development</option>
+                    <option value="cyber">Cyber Security</option>
+                    <option value="network">Network Engineering</option>
+                    <option value="devOps">Dev Ops</option>
+                    <option value="ui">UI/UX Design</option>
+                </select>
+
+                <label>Course Type:</label><br>
+                <input type="radio" id="full-time" name="full-time" value="full-time" class="radio">
+                <label for="full-time">Full-time</label><br>
+
+                <input type="radio" id="part-time" name="part-time" value="part-time" class="radio">
+                <label for="part-time">Part-time</label><br>
+
+                <input type="radio" id="both" name="both" value="both" class="radio">
+                <label for="both">Both</label><br>
+
+                <textarea name="message" id="message" cols="30" rows="10"
+                    placeholder="Please Enter Your Message"></textarea>
+
+                <button type="submit"><a href="mailto:someone@someemail.com">Submit</a></button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+        <section id="map-section" class="main-section">
+            <!-- Google Map -->
+            <h1>Map</h1>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d76309.12575619381!2d-6.435910464328838!3d53.29562210470817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smap!5e0!3m2!1sen!2sie!4v1670487781965!5m2!1sen!2sie"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div id="geo-locator">
+                <button id="find-me">Show my location</button>
+                <p id="status"></p>
+                <p id="co-ords"></p>
+            </div>
+        </section>
+        <section id="special-char" class="main-section">
+            <h1>Special Character</h1>
+            <p>I choose <strong><mark> Climate Change </mark></strong> topic to add Special Character in it.</p>
+            <p><i>Climate science is clear </i>- human activities are estimated to have caused approximately 1.0
+                <sup>o</sup>C of global <br>
+                warming above <sub> pre-industrial </sub> levels with a likely range of 0.8<sup>o</sup>C to
+                1.2<sup>o</sup>C. At current levels of global <br>
+                greenhouse gas emissions, the world remains on course to exceed the Paris Agreement’s temperature <br>
+                thresholds of either 1.5<sup>o</sup>C or 2<sup>o</sup>C above <sub>pre-industrial</sub> levels. <br><br>
+
+                <strong><mark> Climate Change </mark></strong> not only means changes in the average climate such as
+                <i>temperature </i> but also changes <br>
+                in the <i>frequency</i> and <i>intensity</i> of extreme weather and climate events. Though climate
+                change <br>
+                projections, like all projections of the future, are subject to uncertainty, the latest climate <br>
+                <q>modelling projections</q> for Ireland are in <strong><mark>broad agreement</mark></strong> with
+                previous research.
+            </p>
+        </section>
+        <footer>Copyright &copy mycity.co LTd. 2022 | &#9743 086 808 08028<br>
+            <a href="mailto:someone@someemail.com">&#9993 someone@someemail.com</a>
+        </footer>
+    </main>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
