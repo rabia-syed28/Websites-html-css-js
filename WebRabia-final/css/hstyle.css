@@ -1,0 +1,243 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+.container
+{
+    width:100%;
+    height: 100vh;
+    position: relative;
+}
+/* nav bar styling */
+.navbar
+{
+	position: absolute;
+    top:0;
+    left:0;
+	width:100%;
+    height: 70px;
+	padding: 5px 100px;
+	background: linear-gradient(#1a1a1a, rgb(32, 3, 68));
+}
+.logo a
+{
+	color:#fff;
+	font-size:35px;
+	font-weight: 600;
+	position: absolute;
+    top: 10px;
+}
+.logo a span
+{
+	color:#f8a500;
+}
+.menu{
+    flex: 1;
+    text-align: right;
+}
+.menu li
+{
+	list-style: none;
+	display: inline-block;
+	position:relative; 
+    padding-top: 20px ;
+}
+.menu li a
+{
+	color:#f8a500;
+	font-size: 18px;
+	font-weight: 500;
+  	margin-left:25px;
+    display: block;
+    transition: color 0.3s ease;
+}
+.menu li a:hover{
+	color: #fff;
+    transition: 0.9s;
+}
+.menu li a:after
+ {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  bottom: -1px;
+  left: 65%;
+  background: #f8a500;
+  transform: translateX(-50%) scaleX(0);
+  -webkit-transform: translateX(-50%) scaleX(0);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: transform 250ms;
+  transition: transform 250ms;
+}
+.menu li a:hover:after
+{
+    transform: translateX(-50%) scaleX(1);
+    -webkit-transform: translateX(-50%) scaleX(1);
+}
+
+/* about page*/
+/* about banner images*/
+.banner{
+    width: 100%;
+    height: auto;
+    position: relative;
+    
+}
+.h-bg
+{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    background-color: #000000;
+    opacity: 0.5;
+}
+.banner img{
+   
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    object-position: center; 
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+.banner h1{
+    display: block;
+    position: absolute;
+    left: 600px;
+    top: 180px;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+   
+}
+.col-des
+{
+    display:flex;
+    flex-direction: row;
+    width: calc(75%- 15px);
+}
+.Htext
+{
+    width: 40%;
+    height: 550px;
+    float: left;
+    flex-direction: column;
+    position:absolute;
+    padding: 30px;
+    background-color: rgb(255, 244, 230);
+    top: 300px;
+    left: 120px;
+    background-color: linear-gradient(#dddddd, #fff);
+    color: #1a1a1a;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+.Htext h2{
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+.Htext h2::first-letter{
+        font-size: 300%;
+}
+.Htext p
+{
+    line-height: 14px;
+    font-size: 12px;
+}
+.Htext a{
+    width: 80px;
+    height: 30px;
+    display: block;
+    padding: 5px;
+   text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+    color: #1a1a1a;
+    background-color: #f8a500;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+.Htext a:hover{
+    color:#fff;
+    background-color:  rgb(32, 3, 68);
+}
+
+.img-h img{
+    display: flex;
+    flex-direction: column;
+    height: 550PX;
+    width: 40%;
+    object-fit: cover;
+    position:absolute;
+    top: 300px;
+    right: 100px;
+    border: #f8a500 ridge;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+footer{
+    position: absolute;
+    top: 900px;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    background: linear-gradient(rgb(32, 3, 68), #1a1a1a);
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+@media screen and (max-width: 900px){
+    .menu{
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(rgb(32, 3, 68), #1a1a1a) ;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 2;
+    }
+    .Htext{
+        float:left;
+        width:100%;
+        height: 450px;
+        position: absolute;
+        top:300px;
+        left:0;
+    }
+    .img-h img{
+        float:left;
+        width: 100%;
+        height: 300px;
+       position: absolute;
+       top:750px;
+       left:0;
+    }
+    footer{
+        position: absolute;
+        top:1000px;
+    }
+}
+@media screen and (max-width: 500px){
+ img-h img{
+    position: absolute;
+    top: 850px;
+ }   
+}

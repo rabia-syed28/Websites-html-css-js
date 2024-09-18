@@ -1,0 +1,350 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+.container
+{
+    width:100%;
+    height: 100vh;
+}
+/* nav bar styling */
+.navbar
+{
+    position: relative;
+    display: flex;
+	width:100%;
+    height: 70px;
+	padding: 5px 100px;
+	background: linear-gradient(#1a1a1a, rgb(32, 3, 68));
+}
+.logo a
+{
+	color:#fff;
+	font-size:35px;
+	font-weight: 600;
+	position: absolute;
+    top: 10px;
+}
+.logo a span
+{
+	color:#f8a500;
+}
+.menu{
+    flex: 1;
+    text-align: right;
+}
+.menu li
+{
+	list-style: none;
+	display: inline-block;
+	position:relative; 
+    padding-top: 20px ;
+}
+.menu li a
+{
+	color:#f8a500;
+	font-size: 18px;
+	font-weight: 500;
+  	margin-left:25px;
+    display: block;
+    transition: color 0.3s ease;
+}
+.menu li a:hover{
+	color: #fff;
+    transition: 0.9s;
+}
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.menu li a:after
+ {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  bottom: -1px;
+  left: 65%;
+  background: #f8a500;
+  transform: translateX(-50%) scaleX(0);
+  -webkit-transform: translateX(-50%) scaleX(0);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: transform 250ms;
+  transition: transform 250ms;
+}
+.menu li a:hover:after
+{
+    transform: translateX(-50%) scaleX(1);
+    -webkit-transform: translateX(-50%) scaleX(1);
+}
+ /* home banner images*/
+.header1, .header2, .header3, .header4
+{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    top: 70px;
+}
+
+img
+{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    align-items: center;
+    background: no-repeat;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+
+.text
+{
+    width: 600px;
+    position:absolute;
+    top: 150px;
+    left: 145px;
+    color:#fff;
+    animation: textup 12s linear infinite;
+    transform: translateY(100px);
+}
+.text h1{
+    font-size: 26px;
+}
+.text h1::first-letter{
+        font-size: 200%;
+}
+.text p
+{
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.text span{
+    background-color: crimson;
+    height: 3px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+}
+.Htext{
+    width: 80%;
+    height: 350px;
+    background-color: rgb(255, 244, 230);
+    position:absolute;
+    padding-left: 30px;
+    padding-right:30px ;
+    top: 500px;
+    left: 120px;
+    background-color: linear-gradient(#dddddd, #fff);
+    color: #1a1a1a;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+.Htext h2{
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.Htext h2::first-letter{
+        font-size: 300%;
+}
+.Htext p
+{
+    line-height: 14px;
+    font-size: 12px;
+}
+.Htext a{
+    width: 15%;
+    height: 30px;
+    display: block;
+    padding: 5px;
+   text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+    color: #1a1a1a;
+    background-color: #f8a500;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+
+.Htext a:hover{
+    color:#fff;
+    background-color:  rgb(32, 3, 68);
+}
+
+
+.header1{
+    animation: slide1 12s linear infinite;
+}
+.header2{
+    animation: slide2 12s linear infinite;
+}.header3{
+    animation: slide3 12s linear infinite;
+}.header4{
+    animation: slide4 12s linear infinite;
+}
+@keyframes slide1 {
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+@keyframes slide2 {
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes slide3 {
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes slide4 {
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+@keyframes textup {
+    10%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.text1{
+    animation-delay: 0s;
+}
+.text2{
+    animation-delay: 3s;
+}
+.text3{
+    animation-delay: 6s;
+}
+.text4{
+    animation-delay: 9s;
+}
+footer{
+    position: absolute;
+    top: 900px;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    background: linear-gradient(rgb(32, 3, 68), #1a1a1a);
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 800px){
+    .menu{
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(rgb(32, 3, 68), #1a1a1a) ;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 2;
+    }
+    .Htext{
+        float:left;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+    .Htext a{
+        float:left;
+        width: 15%;
+        margin-left: 25px;
+        position: absolute;
+        left: 0;
+        top:280px
+    }
+}
+@media screen and (max-width: 500px){
+    .Htext{
+        height: 420px;
+    }
+    .Htext a{
+        float:left;
+        width: 15%;
+        margin-left: 25px;
+        position: absolute;
+        left: 0;
+        top:340px
+    }
+    footer{
+        position: absolute;
+        top: 950px;
+    }
+}
